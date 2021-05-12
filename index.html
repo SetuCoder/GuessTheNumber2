@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
+<html lang="en" dir="ltr">
+  <head>
+    <title>Guess the number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1 class="relativePosition"> Number guessing game </h1>
+      <h2 class="relativePosition">I've selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. I’ll tell you if your guess was too high or too low. And also, try double tapping/clicking on your device! Good luck :)</h2>
+
+      <div class="form">
+        <div class="textFieldGrid">
+          <input type="text" id="guessField" class="guessField relativePosition userField" placeholder="Enter a guess" maxlength="3">
+          <div class="guessMessageWrapper wrong">
+            <div class="tiltedSquare"></div>
+             <p class="lowOrHi"></p>
+             <p class="lastResult"></p>
+          </div>
+        </div>
+        <div id="buttonsWrapper">
+            <input id="submitButton" type="submit" class="guessSubmit submit relativePosition userField submitHover" value="Submit guess">
+        </div>
+      </div>
+
+        <p class="guesses"></p>
+
+    <script src="js/js.js">
+    </script>
+    
+    <script type="text/javascript">
+      var color = ["#5F4B8BFF","#000000FF","#00203FFF","#2C5F2D","#00539CFF","#0063B2FF","#101820FF","#5CC8D7FF","#89ABE3FF","#F2AA4CFF","#A07855FF","#603F83FF","#2BAE66FF","#FAD0C9FF","#2D2926FF","#DAA03DFF","#990011FF","#F2EDD7FF","#F95700FF","#FFD662FF","#DF6589FF","#FFE77AFF","#500472","#F8D3E2"]
+      var i = 0;
+    document.querySelector("body").addEventListener("dblclick",
+    function(){
+    i = i < color. length ? ++i : 0;
+    document.querySelector("body").style.background = color[i]
+    })
+    </script>
+
+    <script type="text/javascript">
+      var color2 = ["#E69A8DFF","#FFFFFFFF","#ADEFD1FF","#97BC62FF","#EEA47FFF","#9CC3D5FF","#FEE715FF","#B1624EFF","#FCF6F5FF","#101820FF","#D4B996FF","#C7D3D4FF","#FCF6F5FF","#6E6E6DFF","#E94B3CFF","#616247FF","#FCF6F5FF","#755139FF","#FFF","#00539CFF","#3C1053FF","#2C5F2DFF","#e52165","#9FC131FF"]
+      var j = 0;
+    document.querySelector("body").addEventListener("dblclick",
+    function(){
+    j = j < color. length ? ++j : 0;
+    document.querySelector("body").style.color = color2[i]
+    })
+    </script>
+
+  </body>
+</html>
